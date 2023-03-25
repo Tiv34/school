@@ -12,6 +12,9 @@ return [
         'cache' => [
             'class' => \yii\caching\FileCache::class,
         ],
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+        ],
         'urlManager' => [
             'class' => yii\web\UrlManager::class,
             'showScriptName' => false,
