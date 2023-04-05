@@ -9,7 +9,6 @@ use frontend\assets\PortalAsset;
 use yii\bootstrap5\Html;
 use yii\bootstrap5\ActiveForm;
 
-PortalAsset::register($this);
 $this->registerCssFile('@web/css/portal/login.css');
 
 $this->title = 'Авторизация';
@@ -21,19 +20,19 @@ $this->title = 'Авторизация';
                 <?php echo Html::img('@web/css/portal/img/login.jfif'); ?>
             </div>
             <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
+                <h2 class="text-center mb-4">Войти</h2>
+                <?= $form->field($model, 'username')->textInput(['autofocus' => true,'placeholder' => 'Логин'])->label(false) ?>
 
-                <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+                <?= $form->field($model, 'password')->passwordInput(['placeholder' => 'Пароль'])->label(false) ?>
 
-                <?= $form->field($model, 'password')->passwordInput() ?>
+                <?= $form->field($model, 'rememberMe')->checkbox()->label('Запомнит меня') ?>
 
-                <?= $form->field($model, 'rememberMe')->checkbox() ?>
-
-                <div class="my-1 mx-0" style="color:#999;">
-                    Если вы забыли свой пароль, вы можете <?= Html::a('сбросить его', ['site/request-password-reset']) ?>.
+                <div class="form-group button-block">
+                    <?= Html::submitButton('Войти', ['class' => 'bthp btn-success', 'name' => 'login-button']) ?>
+                    <?= Html::a('Зарегестрироваться', ['site/signup'], ['class' => 'bthp btn-primary abthp']) ?>
                 </div>
-
-                <div class="form-group">
-                    <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+                <div class="reset-pass">
+                    <?= Html::a('Восстановить пароль', ['site/request-password-reset']) ?>
                 </div>
 
             <?php ActiveForm::end(); ?>

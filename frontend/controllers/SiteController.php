@@ -21,6 +21,13 @@ use frontend\models\ContactForm;
  */
 class SiteController extends Controller
 {
+
+    public function __construct($id, $module, $config = [])
+    {
+        $this->layout = 'portal';
+        parent::__construct($id, $module, $config);
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -85,14 +92,14 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
-        $this->layout = 'portal';
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
-
         $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->login()) {
+                return $this->goBack();
+            }
         }
 
         $model->password = '';
@@ -218,8 +225,8 @@ class SiteController extends Controller
      * Verify email address
      *
      * @param string $token
-     * @throws BadRequestHttpException
      * @return yii\web\Response
+     * @throws BadRequestHttpException
      */
     public function actionVerifyEmail($token)
     {

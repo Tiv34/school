@@ -6,12 +6,15 @@
 
 use common\widgets\Alert;
 use frontend\assets\AppAsset;
+use frontend\assets\PortalAsset;
 use yii\bootstrap5\Breadcrumbs;
 use yii\bootstrap5\Html;
 use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
 
 AppAsset::register($this);
+PortalAsset::register($this);
+
 ?>
 <?php $this->beginPage() ?>
     <!DOCTYPE html>
@@ -74,8 +77,15 @@ AppAsset::register($this);
     <footer class="footer mt-auto py-3 text-muted">
         <div class="container footer-flex">
             <?php echo Html::img('@web/css/img/logo.png', ['class' => 'logo']) ?>
-            <p class="float-end">111111</p>
-            <p class="float-end">2222222</p>
+            <div class="social-icon-block">
+                <?=Html::img('@web/css/img/vk.svg', ['class' => 'icon-social'])?>
+                <?=Html::img('@web/css/img/WA.svg', ['class' => 'icon-social'])?>
+                <?=Html::img('@web/css/img/web.svg', ['class' => 'icon-social'])?>
+            </div>
+            <div>
+                <p class="mb-1">9:00-18:00</p>
+                <a href="tel:+74995040462">8 (499) 504 04 62</a>
+            </div>
         </div>
     </footer>
 
