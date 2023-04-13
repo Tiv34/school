@@ -43,7 +43,7 @@ PortalAsset::register($this);
 //            ['label' => 'About', 'url' => ['/site/about']],
 //            ['label' => 'Contact', 'url' => ['/site/contact']],
         ];
-//        if (Yii::$app->user->isGuest) {
+//        if (Yii::$app->user->isGuest) {bthp
 //            $menuItems[] = ['label' => 'Регистрация', 'url' => ['/site/signup']];
 //        }
 
@@ -55,7 +55,7 @@ PortalAsset::register($this);
             echo Html::beginForm(['/site/logout'], 'post', ['class' => 'd-flex'])
                 . Html::submitButton(
                     'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout text-decoration-none']
+                    ['class' => 'btn btn-link logout text-decoration-none bthp']
                 )
                 . Html::endForm();
         }

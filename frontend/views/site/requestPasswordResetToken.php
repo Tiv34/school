@@ -2,29 +2,30 @@
 
 /** @var yii\web\View $this */
 /** @var yii\bootstrap5\ActiveForm $form */
-/** @var \frontend\models\PasswordResetRequestForm $model */
+/** @var PasswordResetRequestForm $model */
 
+use frontend\models\PasswordResetRequestForm;
 use yii\bootstrap5\Html;
 use yii\bootstrap5\ActiveForm;
 
-$this->title = 'Request password reset';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'Запросить сброс пароля';
+$this->registerCssFile('@web/css/portal/login.css');
+
 ?>
-<div class="site-request-password-reset">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please fill out your email. A link to reset password will be sent there.</p>
-
+<div class="site-login">
     <div class="row">
-        <div class="col-lg-5">
+        <div class="col-md-8 mx-auto login-box-site">
+            <div class="login-image-block">
+                <?php echo Html::img('@web/css/portal/img/login.jfif'); ?>
+            </div>
             <?php $form = ActiveForm::begin(['id' => 'request-password-reset-form']); ?>
-
-                <?= $form->field($model, 'email')->textInput(['autofocus' => true]) ?>
-
-                <div class="form-group">
-                    <?= Html::submitButton('Send', ['class' => 'btn btn-primary']) ?>
-                </div>
-
+            <h3 class="text-center"><?= Html::encode($this->title) ?></h3>
+            <p class="text-center mb-4">Пожалуйста, заполните свой адрес электронной почты. Туда будет отправлена ссылка для сброса пароля.</p>
+            <?= $form->field($model, 'email')->textInput(['autofocus' => true,'placeholder' => 'Email'])->label(false) ?>
+            <div class="form-group button-block">
+                <?= Html::submitButton('Отправить', ['class' => 'bthp btn-success']) ?>
+            </div>
             <?php ActiveForm::end(); ?>
         </div>
     </div>

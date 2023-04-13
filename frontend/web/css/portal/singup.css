@@ -1,0 +1,22 @@
+.login-box-site {
+    position: relative;
+}
+#form-signup {
+    height: 110%;
+    position:absolute;
+    padding-left: 300px;
+    right: 0;
+    width: 90%;
+    border-radius: 30px;
+}
+
+@media(max-width:1200px) {
+    #form-signup {
+        position: relative;
+        height: auto;
+        width: 100%;
+        padding: 40px 20px 60px 20px;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
+        border-radius: 30px;
+    }
+}

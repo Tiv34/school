@@ -1,6 +1,6 @@
 body {
     background-color: #FFF9F0;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif !important;
 }
 .background-image {
     position: fixed;
@@ -94,6 +94,50 @@ body {
 .was-validated .form-check-input:valid, .form-check-input.is-valid {
     border-color: #987C6C;
 }
-a, a:hover {
+a, a:hover, .menu-portal {
     color: #987C6C;
+}
+.hr-portal {
+    width: 100%;
+    border: 1px solid #E7E7E7;
+    flex: none;
+    flex-grow: 0;
+    opacity: 1;
+}
+.menu-portal a {
+    text-decoration: none;
+}
+.menu-portal li {
+    margin-bottom: 5px;
+}
+.content-block {
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #E7E7E7;
+    border-radius: 10px;
+}
+.notifications-count {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 20px;
+    background: red;
+    color: white;
+    font-size: 8px;
+    text-align: center;
+}
+.profile-block h5 {
+    color: #4D954C;
+}
+.profile-block {
+    margin-left: 60px;
+    width: 120px;
+    justify-content: space-around;
+}
+@media(max-width:575px) {
+    .menu-portal h4 {
+        display:none;
+    }
 }

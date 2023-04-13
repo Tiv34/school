@@ -12,7 +12,7 @@
     border-radius: 30px;
     filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.15));
 }
-#login-form {
+form {
     position: relative;
     color: #987C6C;
     background-color: #ffffff;
@@ -33,24 +33,10 @@
 }
 
 @media(max-width:1200px) {
-    /*.login-image-block img {*/
-    /*    width: 240px;*/
-    /*    height: 340px;*/
-    /*    z-index: 1;*/
-    /*}*/
-    /*#login-form {*/
-    /*    position: absolute;*/
-    /*    z-index: -1;*/
-    /*    right: 220px;*/
-    /*    padding: 20px 20px 20px 150px;*/
-    /*    width: 47%;*/
-    /*    height: 500px;*/
-    /*    border-radius: 30px;*/
-    /*}*/
     .login-image-block img {
         display: none;
     }
-    #login-form {
+    form {
         position: relative;
         height: auto;
         width: 100%;
@@ -59,19 +45,7 @@
         border-radius: 30px;
     }
 }
-@media(max-width:1000px) {
-    /*.login-image-block img {*/
-    /*    display: none;*/
-    /*}*/
-    /*#login-form {*/
-    /*    position: revert;*/
-    /*    height: auto;*/
-    /*    width: 100%;*/
-    /*    padding: 20px;*/
-    /*    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);*/
-    /*    border-radius: 30px;*/
-    /*}*/
-}
+
 @media(max-width:500px) {
     .button-block {
         flex-direction: column;

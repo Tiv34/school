@@ -2,29 +2,29 @@
 
 /** @var yii\web\View $this */
 /** @var yii\bootstrap5\ActiveForm $form */
-/** @var \frontend\models\ResetPasswordForm $model */
+/** @var ResetPasswordForm $model */
 
+use frontend\models\ResetPasswordForm;
 use yii\bootstrap5\Html;
 use yii\bootstrap5\ActiveForm;
 
-$this->title = 'Reset password';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'Восстановление пароля';
+$this->registerCssFile('@web/css/portal/login.css');
 ?>
-<div class="site-reset-password">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please choose your new password:</p>
-
+<div class="site-login">
     <div class="row">
-        <div class="col-lg-5">
+        <div class="col-md-8 mx-auto login-box-site">
+            <div class="login-image-block">
+                <?php echo Html::img('@web/css/portal/img/login.jfif'); ?>
+            </div>
             <?php $form = ActiveForm::begin(['id' => 'reset-password-form']); ?>
-
-                <?= $form->field($model, 'password')->passwordInput(['autofocus' => true]) ?>
-
-                <div class="form-group">
-                    <?= Html::submitButton('Save', ['class' => 'btn btn-primary']) ?>
-                </div>
-
+            <h3 class="text-center"><?= Html::encode($this->title) ?></h3>
+            <p class="text-center mb-4">Пожалуйста, выберите свой новый пароль:</p>
+            <?= $form->field($model, 'password')->passwordInput(['autofocus' => true, 'placeholder' => 'Пароль'])->label(false) ?>
+            <div class="form-group button-block">
+                <?= Html::submitButton('Сохранить', ['class' => 'bthp btn-success']) ?>
+            </div>
             <?php ActiveForm::end(); ?>
         </div>
     </div>

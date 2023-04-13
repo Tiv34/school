@@ -7,29 +7,29 @@
 use yii\bootstrap5\Html;
 use yii\bootstrap5\ActiveForm;
 
-$this->title = 'Signup';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'Регистрация';
+$this->registerCssFile('@web/css/portal/login.css');
+$this->registerCssFile('@web/css/portal/singup.css');
 ?>
-<div class="site-signup">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please fill out the following fields to signup:</p>
-
+<div class="site-login">
     <div class="row">
-        <div class="col-lg-5">
+        <div class="col-md-8 mx-auto login-box-site">
             <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
+            <h2 class="text-center mb-4"><?= Html::encode($this->title) ?></h2>
+            <p>Пожалуйста, заполните следующие поля для регистрации:</p>
+            <?= $form->field($model, 'username')->textInput(['autofocus' => true,'placeholder' => 'Логин'])->label(false) ?>
+            <?= $form->field($model, 'email')->textInput(['placeholder' => 'Email'])->label(false) ?>
+            <?= $form->field($model, 'password')->passwordInput(['placeholder' => 'Пароль'])->label(false) ?>
 
-                <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
-
-                <?= $form->field($model, 'email') ?>
-
-                <?= $form->field($model, 'password')->passwordInput() ?>
-
-                <div class="form-group">
-                    <?= Html::submitButton('Signup', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
-                </div>
-
+            <div class="form-group button-block">
+                <?= Html::submitButton('Зарегестрироваться', ['class' => 'bthp btn-success', 'name' => 'login-button']) ?>
+            </div>
             <?php ActiveForm::end(); ?>
+            <div class="login-image-block">
+                <?php echo Html::img('@web/css/portal/img/login.jfif'); ?>
+            </div>
         </div>
     </div>
 </div>
+

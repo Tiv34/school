@@ -5,7 +5,6 @@
 /** @var LoginForm $model */
 
 use common\models\LoginForm;
-use frontend\assets\PortalAsset;
 use yii\bootstrap5\Html;
 use yii\bootstrap5\ActiveForm;
 
