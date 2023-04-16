@@ -67,7 +67,9 @@ body {
 .btn-primary, .btn-primary:hover {
     background: #987C6C;
 }
-
+.bthp-sm {
+    min-width: 110px;
+}
 .form-control {
     background: rgba(217, 217, 217, 0.41)!important;
     border-radius: 10px!important;
@@ -101,6 +103,9 @@ body {
 }
 .list-group-item {
     color: #987C6C!important;
+}
+.list-group a {
+    text-decoration: none;
 }
 .was-validated .form-check-input:valid, .form-check-input.is-valid {
     border-color: #987C6C;
@@ -262,6 +267,46 @@ a, a:hover, .menu-portal {
 }
 .content-block-top-radius {
     border-radius: 0 0 10px 10px;
+}
+.directory-card {
+    background: rgba(77, 149, 76, 0.1);
+    height: 80px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-title-mr {
+    margin-left: 75px;
+}
+.card-title-mr h4 {
+    margin: auto;
+}
+.icon-header-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.block-card-obj {
+    background: #FFFCF8;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.block-card-obj .card {
+    margin: 0 20px 20px 0;
+}
+.block-card-obj .card svg {
+    width: 30px
+}
+.icon-header-card[aria-expanded="false"] {
+    transform: rotate(0deg);
+}
+.icon-header-card[aria-expanded="true"] {
+    transform: rotate(180deg);
 }
 @media(max-width:990px) {
     p, li, label {
