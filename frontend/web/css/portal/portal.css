@@ -1,6 +1,7 @@
 body {
     background-color: #FFF9F0;
     font-family: 'Playfair Display', serif !important;
+    color: #987C6C!important;
 }
 .background-image {
     position: fixed;
@@ -86,10 +87,20 @@ body {
     background-color: #987C6C;
 }
 .was-validated .form-check-input:valid:focus, .form-check-input.is-valid:focus {
-    box-shadow: none;
+    box-shadow: none !important;
+}
+.form-check-input:focus {
+    box-shadow: none !important;
+}
+.form-control:focus {
+    border-color: #c7a38e;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(206, 167, 145, 0.8);
 }
 .was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
     color: #987C6C;
+}
+.list-group-item {
+    color: #987C6C!important;
 }
 .was-validated .form-check-input:valid, .form-check-input.is-valid {
     border-color: #987C6C;
@@ -135,6 +146,157 @@ a, a:hover, .menu-portal {
     margin-left: 60px;
     width: 120px;
     justify-content: space-around;
+}
+.profile-block-name {
+    text-decoration: none;
+    font-size: 18px;
+    color: #4D954C;
+}
+.profile-block-name:hover {
+    color: #4D954C;
+}
+.notifications, #dropdownMenuButton1, .collapse-opt, .round-plus {
+    cursor: pointer;
+}
+.dropdown-menu {
+    font-family: 'Montserrat', serif!important;
+    font-style: normal!important;
+    border: 1px solid #E7E7E7 !important;
+}
+.dropdown {
+    margin-left: 10px;
+}
+.dropdown-notifications {
+    width: 240px;
+    padding: 10px 20px;
+    max-height: 500px;
+}
+.dropdown-notifications li {
+    margin: 10px 0;
+}
+.form-group {
+    margin: 20px 0;
+}
+.collapse-opt.active {
+    background: rgba(77, 149, 76, 0.1);
+    border-left: 1px solid #4D954C;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+.btn-green {
+    background: none;
+    border: none;
+    color: #4D954C;
+}
+.drop-button {
+    margin-right: 20px;
+}
+.button-profile-block {
+    display: flex;
+    justify-content: space-between;
+}
+.img-load-block {
+    width: 200px;
+    height: 200px;
+    background: rgba(77, 149, 76, 0.1);
+    border: 6px solid rgba(77, 149, 76, 0.1);
+    border-radius: 5px;
+}
+.round-plus {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 60px;
+    top: 60px;
+    background: white;
+    display: flex;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.header-content-block {
+    display: flex;
+    justify-content: space-between;
+}
+.header-content-block .title {
+    width: 300px;
+    padding: 15px 40px 15px 15px;
+    border-radius: 10px 10px 0 0;
+    border-top: 1px solid #E7E7E7;
+    border-right: 1px solid #E7E7E7;
+    border-left: 1px solid #E7E7E7;
+    border-bottom: none;
+}
+.header-content-block .view-list {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+}
+.header-content-block .view-list .view-list-tab {
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;
+    border-top: 1px solid #E7E7E7;
+    border-right: 1px solid #E7E7E7;
+    border-left: 1px solid #E7E7E7;
+    border-bottom: none;
+    background: rgba(77, 149, 76, 0.1);
+}
+.content-block.search-block {
+    border-top: none;
+    border-right: 1px solid #E7E7E7;
+    border-left: 1px solid #E7E7E7;
+    border-bottom: 1px solid #E7E7E7;
+}
+.header-content-block .view-list .view-list-tab.active {
+    background: #FFFFFF;
+}
+.header-content-block .view-list .view-list-tab.active svg rect {
+    fill: #E7E7E7;
+}
+.header-content {
+    padding: 0;
+}
+.content-block-top-radius {
+    border-radius: 0 0 10px 10px;
+}
+@media(max-width:990px) {
+    p, li, label {
+        font-size: 12px!important;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+    .menu-mob {
+        flex-direction: column-reverse;
+    }
+    .content-menu .list-group {
+        display: flex;
+        flex-direction: row;
+        border-radius: 0;
+    }
+    .content-menu {
+        width: fit-content;
+        border: none;
+    }
+    .collapse-opt {
+        border-radius: 0;
+    }
+    .collapse-opt.active {
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-bottom: 1px solid #4D954C;
+    }
 }
 @media(max-width:575px) {
     .menu-portal h4 {

@@ -15,6 +15,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use yii\web\ErrorAction;
 
 /**
  * Site controller
@@ -57,15 +58,11 @@ class CabinetController extends Controller
     /**
      * {@inheritdoc}
      */
-    public function actions()
+    public function actions(): array
     {
         return [
             'error' => [
-                'class' => \yii\web\ErrorAction::class,
-            ],
-            'captcha' => [
-                'class' => \yii\captcha\CaptchaAction::class,
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+                'class' => ErrorAction::class,
             ],
         ];
     }
@@ -80,4 +77,13 @@ class CabinetController extends Controller
         return $this->render('index');
     }
 
+    /**
+     * Displays homepage.
+     *
+     * @return mixed
+     */
+    public function actionProfile()
+    {
+        return $this->render('profile');
+    }
 }

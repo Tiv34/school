@@ -4,16 +4,11 @@ namespace frontend\assets;
 
 use yii\web\AssetBundle;
 
-/**
- * Main frontend application asset bundle.
- */
-class PortalAsset extends AssetBundle
+class FormAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/portal/portal.css',
-    ];
-    public $js = [
+        'css/portal/form.css',
     ];
 }

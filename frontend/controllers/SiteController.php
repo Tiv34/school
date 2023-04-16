@@ -55,12 +55,6 @@ class SiteController extends Controller
                     ],
                 ],
             ],
-            'verbs' => [
-                'class' => VerbFilter::class,
-                'actions' => [
-                    'logout' => ['post'],
-                ],
-            ],
         ];
     }
 
@@ -72,6 +66,8 @@ class SiteController extends Controller
         return [
             'error' => [
                 'class' => \yii\web\ErrorAction::class,
+                'view' => '@app/views/cabinet/error.php',
+                'layout' => 'cabinet'
             ],
             'captcha' => [
                 'class' => \yii\captcha\CaptchaAction::class,
