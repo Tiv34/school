@@ -18,7 +18,7 @@ $this->registerCssFile('@web/css/portal/login.css');
             <div class="login-image-block">
                 <?php echo Html::img('@web/css/portal/img/login.jfif'); ?>
             </div>
-            <?php $form = ActiveForm::begin(['id' => 'reset-password-form']); ?>
+            <?php $form = ActiveForm::begin(['id' => 'reset-password-form', 'layout' => 'floating']); ?>
             <h3 class="text-center"><?= Html::encode($this->title) ?></h3>
             <p class="text-center mb-4">Пожалуйста, выберите свой новый пароль:</p>
             <?= $form->field($model, 'password')->passwordInput(['autofocus' => true, 'placeholder' => 'Пароль'])->label(false) ?>

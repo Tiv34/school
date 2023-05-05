@@ -39,6 +39,13 @@ class SignupForm extends Model
         ];
     }
 
+    public function attributeLabels(): array
+    {
+        return [
+            'username' => 'Логин',
+            'password' => 'Пароль',
+        ];
+    }
     /**
      * Signs user up.
      *
@@ -56,11 +63,12 @@ class SignupForm extends Model
         $user->setPassword($this->password);
         $user->generateAuthKey();
         $user->generateEmailVerificationToken();
+        $user->save();
         $auth = Yii::$app->authManager;
-        $authorRole = $auth->getRole('student');
-        $auth->assign($authorRole, $user->getId());
+        $authorRole = $auth->getRole('teacher');
+        $auth->assign($authorRole, $user->id);
 
-        return $user->save() && $this->sendEmail($user);
+        return  $this->sendEmail($user);
     }
 
     /**

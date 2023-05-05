@@ -15,12 +15,12 @@ $this->registerCssFile('@web/css/portal/singup.css');
 <div class="site-login">
     <div class="row">
         <div class="col-md-8 mx-auto login-box-site">
-            <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
+            <?php $form = ActiveForm::begin(['id' => 'form-signup', 'layout' => 'floating']); ?>
             <h2 class="text-center mb-4"><?= Html::encode($this->title) ?></h2>
             <p>Пожалуйста, заполните следующие поля для регистрации:</p>
-            <?= $form->field($model, 'username')->textInput(['autofocus' => true,'placeholder' => 'Логин'])->label(false) ?>
-            <?= $form->field($model, 'email')->textInput(['placeholder' => 'Email'])->label(false) ?>
-            <?= $form->field($model, 'password')->passwordInput(['placeholder' => 'Пароль'])->label(false) ?>
+            <?= $form->field($model, 'username')->textInput(['autofocus' => true])->label() ?>
+            <?= $form->field($model, 'email')->textInput()->label() ?>
+            <?= $form->field($model, 'password')->passwordInput()->label() ?>
 
             <div class="form-group button-block">
                 <?= Html::submitButton('Зарегестрироваться', ['class' => 'bthp btn-success', 'name' => 'login-button']) ?>

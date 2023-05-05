@@ -18,11 +18,11 @@ $this->title = 'Авторизация';
             <div class="login-image-block">
                 <?php echo Html::img('@web/css/portal/img/login.jfif'); ?>
             </div>
-            <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
+            <?php $form = ActiveForm::begin(['id' => 'login-form', 'layout' => 'floating']); ?>
                 <h2 class="text-center mb-4">Войти</h2>
-                <?= $form->field($model, 'username')->textInput(['autofocus' => true,'placeholder' => 'Логин'])->label(false) ?>
+                <?= $form->field($model, 'username')->textInput(['autofocus' => true])->label() ?>
 
-                <?= $form->field($model, 'password')->passwordInput(['placeholder' => 'Пароль'])->label(false) ?>
+                <?= $form->field($model, 'password')->passwordInput()->label() ?>
 
                 <?= $form->field($model, 'rememberMe')->checkbox()->label('Запомнит меня') ?>
 

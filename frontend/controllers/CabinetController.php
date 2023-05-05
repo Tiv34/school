@@ -84,6 +84,15 @@ class CabinetController extends Controller
      */
     public function actionProfile()
     {
-        return $this->render('profile');
+        return $this->render('profile/index');
+    }
+    /**
+     * Displays homepage.
+     *
+     * @return mixed
+     */
+    public function actionProfileNotifications()
+    {
+        return $this->render('profile/index');
     }
 }
