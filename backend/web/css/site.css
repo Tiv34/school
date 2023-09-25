@@ -2,7 +2,18 @@ main > .container, main > .container-fluid
 {
     padding: 110px 15px 20px;
 }
-
+.form-control.input-sm {
+    margin-bottom: 10px;
+}
+.grid-view {
+    margin-top: 20px;
+}
+.form-control.input-sm {
+    width: 200px
+}
+/*.btn-default{*/
+/*    background: #96A48B;*/
+/*}*/
 .footer {
     background-color: #ffffff;
     font-size: .9em;

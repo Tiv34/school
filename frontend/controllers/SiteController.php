@@ -4,13 +4,11 @@ namespace frontend\controllers;
 
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
+use webvimark\modules\UserManagement\models\forms\LoginForm;
 use Yii;
 use yii\base\InvalidArgumentException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
-use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
-use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
@@ -24,9 +22,11 @@ class SiteController extends Controller
 
     public function __construct($id, $module, $config = [])
     {
-        $this->layout = 'portal';
+//        $this->layout = '@common/views/layouts/main';
         parent::__construct($id, $module, $config);
     }
+
+    public bool $freeAccess = true;
 
     /**
      * {@inheritdoc}
@@ -34,26 +34,8 @@ class SiteController extends Controller
     public function behaviors()
     {
         return [
-            'access' => [
-                'class' => AccessControl::class,
-                'only' => ['index', 'logout', 'signup'],
-                'rules' => [
-                    [
-                        'actions' => ['signup'],
-                        'allow' => true,
-                        'roles' => ['?'],
-                    ],
-                    [
-                        'actions' => ['logout'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                    [
-                        'actions' => ['index'],
-                        'allow'   => true,
-                        'roles' => ['@', '?'],
-                    ],
-                ],
+            'ghost-access'=> [
+                'class' => 'webvimark\modules\UserManagement\components\GhostAccessControl',
             ],
         ];
     }
@@ -83,10 +65,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-//        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-//        }
-//        return $this->render('index');
+        if (!Yii::$app->user->isGuest) {
+            return $this->render('index');
+        }
+        return $this->redirect('/user-management/auth/login');
     }
 
     /**

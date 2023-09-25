@@ -1,5 +1,7 @@
 <?php
 
+use yii\console\Application;
+
 /**
  * This class only exists here for IDE (PHPStorm/Netbeans/...) autocompletion.
  * This file is never included anywhere.
@@ -13,7 +15,7 @@
  */
 class Yii {
     /**
-     * @var \yii\web\Application|\yii\console\Application|__Application
+     * @var \yii\web\Application|Application|__Application
      */
     public static $app;
 }
@@ -27,7 +29,7 @@ class __Application {
 }
 
 /**
- * @property app\models\User $identity
+ * @property common\models\User $identity
  */
 class __WebUser {
 }
