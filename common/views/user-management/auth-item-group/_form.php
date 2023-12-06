@@ -10,7 +10,7 @@ use yii\bootstrap5\ActiveForm;
  * @var yii\bootstrap5\ActiveForm $form
  */
 ?>
-<div class="p-3 bg-white">
+<div class="p-3 content-block">
 
     <div class="auth-item-group-form">
 

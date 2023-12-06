@@ -51,45 +51,6 @@ use yii\helpers\Url;
                         </div>
                     </div>
                 </div>
-
-
-<!--                <div class="form-group row">-->
-<!--                    <label for="inputPassword" class="col-sm-2 col-form-label">Имя</label>-->
-<!--                    <div class="col-sm-10">-->
-<!--                        <input type="text" class="form-control">-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="form-group row">-->
-<!--                    <label for="inputPassword" class="col-sm-2 col-form-label">Фамилия</label>-->
-<!--                    <div class="col-sm-10">-->
-<!--                        <input type="text" class="form-control">-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="form-group row">-->
-<!--                    <label for="inputPassword" class="col-sm-3 col-form-label">Электронная почта</label>-->
-<!--                    <div class="col-sm-9">-->
-<!--                        <input type="text" class="form-control">-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="form-group row">-->
-<!--                    <label for="inputPassword" class="col-sm-3 col-form-label">Телефон для СМС уведомлений</label>-->
-<!--                    <div class="col-sm-9">-->
-<!--                        <input type="text" class="form-control">-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <hr>-->
-<!--                <div class="form-group row">-->
-<!--                    <label for="inputPassword" class="col-sm-3 col-form-label">Часовой пояс</label>-->
-<!--                    <div class="col-sm-9">-->
-<!--                        <input type="text" class="form-control">-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="form-group row">-->
-<!--                    <label for="inputPassword" class="col-sm-3 col-form-label">Город проживания</label>-->
-<!--                    <div class="col-sm-9">-->
-<!--                        <input type="text" class="form-control">-->
-<!--                    </div>-->
-<!--                </div>-->
             </div>
             <hr>
             <div class="button-profile-block">

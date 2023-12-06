@@ -21,7 +21,7 @@ use yii\grid\GridView;
 $this->title = UserManagementModule::t('back', 'Users');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="p-3 bg-white">
+<div class="p-3 content-block">
 
     <div class="user-index">
 
@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="panel-body">
 
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="d-flex justify-content-between align-items-center">
                         <p>
                             <?= GhostHtml::a(
                                 '<span class="glyphicon glyphicon-plus-sign"></span> ' . UserManagementModule::t('back', 'Create'),
@@ -39,9 +39,6 @@ $this->params['breadcrumbs'][] = $this->title;
                                 ['class' => 'btn btn-success']
                             ) ?>
                         </p>
-                    </div>
-
-                    <div class="col-sm-6 text-right">
                         <?= GridPageSize::widget(['pjaxId' => 'user-grid-pjax']) ?>
                     </div>
                 </div>

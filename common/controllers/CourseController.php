@@ -20,4 +20,19 @@ class CourseController extends BaseController
             'user' => Yii::$app->user->identity
         ]);
     }
+
+    /**
+     * Displays homepage.
+     *
+     * @return mixed
+     */
+    public function actionAdd()
+    {
+        $model = new CourseForm();
+        return $this->render('add', [
+            'model' => $model,
+            'user' => Yii::$app->user->identity
+        ]);
+    }
+
 }

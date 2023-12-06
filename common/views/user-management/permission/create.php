@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = ['label' => UserManagementModule::t('back', 'Pe
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="p-3 bg-white">
+<div class="p-3 content-block">
     <h2 class="lte-hide-title"><?= $this->title ?></h2>
 
     <div class="panel panel-default">

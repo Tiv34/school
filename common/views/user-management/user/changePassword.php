@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = ['label' => UserManagementModule::t('back', 'Us
 $this->params['breadcrumbs'][] = ['label' => $model->username, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = UserManagementModule::t('back', 'Changing password');
 ?>
-<div class="p-3 bg-white">
+<div class="p-3 content-block">
 
     <div class="user-update">
 

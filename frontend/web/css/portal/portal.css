@@ -213,6 +213,7 @@ a, a:hover, .menu-portal {
     background: #FFFFFF;
     border: 1px solid #E7E7E7;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .notifications-count {
@@ -236,6 +237,7 @@ a, a:hover, .menu-portal {
     margin-left: 60px;
     width: 120px;
     justify-content: space-around;
+    align-items: center;
 }
 
 .profile-block-name {
@@ -291,6 +293,9 @@ a, a:hover, .menu-portal {
     color: #4D954C;
 }
 
+.bttn-button {
+    color: #4D954C;
+}
 
 .drop-button {
     margin-right: 20px;
@@ -406,6 +411,7 @@ a, a:hover, .menu-portal {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 50px;
 }
 
 .block-card-obj {
@@ -462,6 +468,15 @@ a, a:hover, .menu-portal {
     background-color: initial;
 }
 
+.title-bg {
+    background: rgba(77, 149, 76, 0.1);
+    color: #4D954C;
+}
+.header-course {
+    position: relative;
+    padding-left: 100px;
+}
+
 @media (max-width: 990px) {
     p, li, label {
         font-size: 12px !important;
@@ -482,11 +497,19 @@ a, a:hover, .menu-portal {
     .menu-mob {
         flex-direction: column-reverse;
     }
+    .icon-header-card {
+        height: 30px;
+    }
+    .content-block {
 
-    .content-menu .list-group {
-        display: flex;
-        flex-direction: row;
-        border-radius: 0;
+    }
+    /*.content-menu .list-group {*/
+    /*    display: flex;*/
+    /*    flex-direction: row;*/
+    /*    border-radius: 0;*/
+    /*}*/
+    .directory-card {
+        height: 45px;
     }
 
     .content-menu {

@@ -17,7 +17,7 @@ $this->title = UserManagementModule::t('back', 'Visit log');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-    <div class="p-3 bg-white">
+    <div class="p-3 content-block">
 
         <div class="user-visit-log-index">
 

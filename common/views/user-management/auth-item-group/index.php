@@ -19,7 +19,7 @@ use yii\grid\GridView;
 $this->title = UserManagementModule::t('back', 'Permission groups');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="p-3 bg-white">
+<div class="p-3 content-block">
 
     <div class="auth-item-group-index">
 

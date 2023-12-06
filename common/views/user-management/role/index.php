@@ -22,13 +22,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
 ?>
 
-<div class="p-3 bg-white">
+<div class="p-3 content-block">
     <h2 class="lte-hide-title"><?= $this->title ?></h2>
 
     <div class="panel panel-default">
         <div class="panel-body">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="d-flex justify-content-between align-items-center">
                     <p>
                         <?= GhostHtml::a(
                             '<span class="glyphicon glyphicon-plus-sign"></span> ' . UserManagementModule::t('back', 'Create'),
@@ -36,9 +36,6 @@ $this->params['breadcrumbs'][] = $this->title;
                             ['class' => 'btn btn-success']
                         ) ?>
                     </p>
-                </div>
-
-                <div class="col-sm-6 text-right">
                     <?= GridPageSize::widget(['pjaxId' => 'role-grid-pjax']) ?>
                 </div>
             </div>

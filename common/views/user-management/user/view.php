@@ -17,7 +17,7 @@ $this->title = $model->username;
 $this->params['breadcrumbs'][] = ['label' => UserManagementModule::t('back', 'Users'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="p-3 bg-white">
+<div class="p-3 content-block">
 
     <div class="user-view">
 

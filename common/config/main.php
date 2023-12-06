@@ -20,12 +20,9 @@ return [
             // $: anchored to the end of the string
             //'passwordRegexp' => '^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])\S*$',
 
-            // 'on beforeAction'=>function(yii\base\ActionEvent $event) {
-            //    if ($event->action->uniqueId == 'user-management/auth/login')
-            //    {
-            //        $event->action->controller->layout = 'main.php';
-            //    };
-            // },
+             'on beforeAction'=>function(yii\base\ActionEvent $event) {
+                    $event->action->controller->layout = '@common/views/layouts/main.php';
+             },
         ],
     ],
     'components' => [
@@ -52,7 +49,7 @@ return [
         'view' => [
             'theme' => [
                 'pathMap' => [
-                    '@webvimark/views' => '@app/views/user-management'
+                    '@webvimark/views' => '@common/views/user-management'
                 ]
             ]
         ],
